@@ -1,0 +1,71 @@
+body {
+    background-color: #0C090D;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Title */
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    text-decoration: underline;
+}
+
+/* Game Container */
+#container {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Game Grid */
+#game {
+    width: min(90vw, 60vmin);
+    height: min(90vw, 60vmin);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5vmin;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Boxes */
+.box {
+    width: 18vmin;
+    height: 18vmin;
+    max-width: 110px;
+    max-height: 110px;
+    border-radius: 15px;
+    border: none;
+    font-size: clamp(3rem, 10vw, 6rem);
+    box-shadow: 0 0 1rem rgb(1, 242, 255);
+    color: #17BEBB;
+    background-color: whitesmoke;
+}
+
+/* Reset Button */
+#reset {
+    width: min(90%, 20rem);
+    height: 4rem;
+    margin: 20px auto;
+    display: block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    border: 4px solid black;
+    border-radius: 25px;
+    background-color: #17BEBB;
+    cursor: pointer;
+}
+
+/* Winner Text */
+#winner {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    color: #17BEBB;
+    margin-top: 10px;
+}
+
+.hide { 
+    visibility: hidden; 
+}
