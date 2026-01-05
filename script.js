@@ -15,6 +15,10 @@ const winpatt = [
     [2, 4, 6],
 ];
 
+const disableBoxes = () => {
+    boxes.forEach(box => box.disabled = true);
+};
+
 boxes.forEach((box) => {
     box.addEventListener("click", () => {
         if (playerX == true) {
@@ -25,8 +29,6 @@ boxes.forEach((box) => {
             box.innerText = "O";
             playerX = true;
         }
-        box.disabled = true;
-
         checkwin();
     });
 });
@@ -40,7 +42,8 @@ const checkwin = () => {
         if (pos1 != "" && pos2 != "" && pos3 != "") {
             if (pos1 === pos2 && pos2 === pos3) {
                 winner.innerText = `Winner is Player${pos1}`;
-                winner.classList.remove("hide")
+                winner.classList.remove("hide");
+                disableBoxes();
             }
         }
     }
